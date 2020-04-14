@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Notes Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Manage your contacts here</h1>
+        <div style="height:5%;width:30%">
+            <a href={% url 'addit' %}>Add Contact</a>
+        </div>
+         
+    </div>
+        <br /><br />
+              {% if leng %}
+                <table>
+                      <tr>
+                        <th>Name</th>
+                        <th>Number</th>
+                        <th>Company</th>
+                        <th>More</th>
+                      </tr>
+                            {% for i in info %}
+                                <tr>
+                                {% for a, b in i.items %}
+                                    {% if a == 'name' %}
+                                        <td>{{b}}</td>   
+                                    {% endif %}
+                                    {% if a == 'Mobnum' %}
+                                        <td>{{b}}</td>
+                                    {% endif %}
+                                    {% if a == 'Company' %}
+                                        <td>{{b}}</td>
+                                    {% endif %}
+                                {% endfor %}
+                                    <td>
+                                        <a href="{% url 'editit' i.Mobnum %}">
+                                          <div style="height:5%;width:45%">
+                                            Delete
+                                          </div>
+                                        </a>
+                                        <a href="{% url 'modifyit' i.Mobnum %} ">
+                                          <div style="height:5%;width:45%">
+                                            Edit
+                                          </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                </table>
+              {% else %}
+                <p> No Contacts.</p>
+              {% endif %}
+</body>
+</html>
