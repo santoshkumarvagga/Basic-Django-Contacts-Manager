@@ -51,4 +51,3 @@ def alter(request, cid):
         leng = len(info)
         ctx = {'info': info, 'leng' : leng, 'id' : cid}
         return render(request, 'Notes_home.html', ctx)
-

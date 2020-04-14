@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-
+{% load static %}
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -58,13 +58,12 @@
 </head>
 <body>
     <div class="jumbotron">
+        <img src="{% static 'Contacts-icon.png' %}" alt="Contacts Image" />
         <h1>Manage your contacts here</h1>
         <div style="height:5%;width:30%">
             <a href={% url 'addit' %}>Add Contact</a>
         </div>
-         
     </div>
-        <br /><br />
               {% if leng %}
                 <table>
                       <tr>
@@ -77,7 +76,7 @@
                                 <tr>
                                 {% for a, b in i.items %}
                                     {% if a == 'name' %}
-                                        <td>{{b}}</td>   
+                                        <td>{{b}}</td>
                                     {% endif %}
                                     {% if a == 'Mobnum' %}
                                         <td>{{b}}</td>

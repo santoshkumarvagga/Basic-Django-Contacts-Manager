@@ -50,6 +50,8 @@
   <ItemGroup>
     <Content Include="db.sqlite3" />
     <Content Include="requirements.txt" />
+    <Content Include="static\Contacts-icon.png" />
+    <Content Include="static\contacts.jpeg" />
     <Content Include="templates\Edit_Contact.html" />
     <Content Include="templates\Notes_add.html" />
     <Content Include="templates\Notes_home.html" />
@@ -59,6 +61,7 @@
     <Folder Include="Contacts_Manager\" />
     <Folder Include="Contact\" />
     <Folder Include="Contact\migrations\" />
+    <Folder Include="static\" />
     <Folder Include="templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
