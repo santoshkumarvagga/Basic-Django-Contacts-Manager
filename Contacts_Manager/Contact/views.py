@@ -49,10 +49,7 @@ def alter(request, cid):
         info.update(Company=request.POST['compname'])
         info = Contacts.objects.values()
         print('is is ',info)
-        #print('hi ',Contacts.objects.all())
         leng = len(info)
         ctx = {'info': info, 'leng' : leng, 'id' : cid}
-        #print(ctx)
-        #print('just before final show')
         return render(request, 'Notes_home.html', ctx)
 
