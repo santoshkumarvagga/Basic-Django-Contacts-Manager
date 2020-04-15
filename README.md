@@ -1,7 +1,7 @@
 # Basic-Django-Contacts-Manager
 Superuser details: 
 username : sahanavagga
-password: santosh96
+password: san*****6
 
 Topics Covered:
 
