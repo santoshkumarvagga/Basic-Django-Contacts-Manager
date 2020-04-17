@@ -27,3 +27,5 @@ class PublisherDetail(DetailView):
         return context
 ```
 
+
+
