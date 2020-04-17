@@ -23,7 +23,7 @@ def show(request):
 def add(request):
     return render(request, 'Notes_add.html')
 
-def edit(request, cid):
+def edit(request, cid): #deletes an existing contact
     cinfo = Contacts.objects.filter(pk=cid)
     cinfo.delete()
     info = list(Contacts.objects.values())
@@ -31,7 +31,7 @@ def edit(request, cid):
     ctx = {'info': info, 'leng' : leng}
     return render(request, 'Notes_home.html', ctx)
 
-def modify(request, cid):
+def modify(request, cid):#populates html form with model values for selected contact to be edited
     info = Contacts.objects.filter(pk = cid).values()
     ctx = {
         'name' : info[0]['name'],
@@ -41,7 +41,7 @@ def modify(request, cid):
     }
     return render(request, 'Edit_Contact.html', ctx)
 
-def alter(request, cid):
+def alter(request, cid):#takes new data and saves it to db and renders in frontend
     if request.method == 'POST':
         info = Contacts.objects.filter(pk = cid)
         info.update(name=request.POST['cname'])
