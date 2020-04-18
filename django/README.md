@@ -22,7 +22,7 @@ Views:  mainly 2 types
 
 Base  views: 3 types
 
-1\) view\(ok\)
+1\) ~~view\(ok\)~~
 
 2\) Redirect view
 
