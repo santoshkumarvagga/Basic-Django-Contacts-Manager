@@ -6,7 +6,7 @@ description: Basics
 
 Views:  mainly 2 types
 
-1\) Function based view\(OK\)
+1\) ~~Function based view\(ok~~\)
 
 2\) Class based view: 3 types
 
