@@ -40,7 +40,7 @@ Generic display view : 3 types
 
 Generic editing view: 4 types
 
-1\) Form view
+1\) Form view - A view that displays a form. On error, redisplays the form with validation errors; on success, redirects to a new URL.
 
 2\) Create view
 
