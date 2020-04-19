@@ -44,9 +44,9 @@ Generic editing view: 4 types
 
 2\) Create view
 
-3\) Delete view
+3\) update view - A view that displays a form for editing an existing object, redisplaying the form with validation errors \(if there are any\) and saving changes to the object. This uses a form automatically generated from the object’s model class \(unless a form class is manually specified\).
 
-4\) update view - A view that displays a form for editing an existing object, redisplaying the form with validation errors \(if there are any\) and saving changes to the object. This uses a form automatically generated from the object’s model class \(unless a form class is manually specified\).
+4\) Delete view -  A view that displays a confirmation page and deletes an existing object. The given object will only be deleted if the request method is `POST`. If this view is fetched via `GET`, it will display a confirmation page that should contain a form that POSTs to the same URL.
 
 
 
