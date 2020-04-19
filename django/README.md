@@ -46,7 +46,7 @@ Generic editing view: 4 types
 
 3\) Delete view
 
-4\) update view
+4\) update view - A view that displays a form for editing an existing object, redisplaying the form with validation errors \(if there are any\) and saving changes to the object. This uses a form automatically generated from the object’s model class \(unless a form class is manually specified\).
 
 
 
