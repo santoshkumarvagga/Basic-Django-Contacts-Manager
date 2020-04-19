@@ -42,7 +42,7 @@ Generic editing view: 4 types
 
 1\) Form view - A view that displays a form. On error, redisplays the form with validation errors; on success, redirects to a new URL.
 
-2\) Create view
+2\) Create view - 
 
 3\) update view - A view that displays a form for editing an existing object, redisplaying the form with validation errors \(if there are any\) and saving changes to the object. This uses a form automatically generated from the object’s model class \(unless a form class is manually specified\).
 
