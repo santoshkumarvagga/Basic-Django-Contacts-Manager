@@ -22,11 +22,11 @@ Views:  mainly 2 types
 
 Base  views: 3 types
 
-1\) view\(ok\)
+1\) view\(ok\) - generic one
 
-2\) Redirect view
+2\) Redirect view 
 
-3\) Template view
+3\) Template view - to render template
 
 ------------------------------------------------------------------------------------------------------------
 
